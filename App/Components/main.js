@@ -5,6 +5,7 @@ import {
   StyleSheet,
   Text,
   View,
+  Image,
   TouchableHighlight
 } from 'react-native';
 
@@ -30,9 +31,20 @@ class Main extends Component{
     console.log("rendering Main")
     return (
       <View style={styles.container}>
-        <Text>HEY THERE</Text>
+        <Text style={styles.welcome}>
+        R E A C H out with a simple tap.{'\n'}
+        </Text>
+        <Image source={require('../../reach_button.png')} style={{width: 300, height: 300}}/>
+        <Text style={styles.instructions}>
+        {'\n'}
+        Preset SMS messages to send to your support network.
+        </Text>
+        <Text>
+        When its time to reach out, simply open and{'\n'}
+        R E A C H
+        </Text>
         <TouchableHighlight onPress={this._onPressButton.bind(this)}>
-          <Text>PRESS MEE</Text>
+          <Text>Register</Text>
         </TouchableHighlight>
       </View>
     )
