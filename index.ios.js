@@ -17,16 +17,12 @@ import {
 class Reachastra extends Component {
   render() {
     return (
-      // <View>
-      // <Text> Hello world </Text>
-      // </View>
       <NavigatorIOS
         style={styles.container}
         initialRoute={{
           title: 'reachastra',
           component: Main
         }} />
-
     );
   }
 }
