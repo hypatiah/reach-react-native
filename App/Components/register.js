@@ -7,7 +7,7 @@ import {
   View
 } from 'react-native';
 
-class Next extends Component{
+class Register extends Component{
   render() {
     console.log("rendering Main")
     return (
@@ -27,4 +27,4 @@ var styles = StyleSheet.create({
 });
 
 
-module.exports = Next;
+module.exports = Register;

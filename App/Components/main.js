@@ -5,10 +5,11 @@ import {
   StyleSheet,
   Text,
   View,
+  Image,
   TouchableHighlight
 } from 'react-native';
 
-var Next = require('./next')
+var Register = require('./register')
 
 class Main extends Component{
 
@@ -21,8 +22,8 @@ class Main extends Component{
     console.log("AHHHH", this.props)
     console.log('BUTTON WORKING')
     this.props.navigator.push({
-      title: 'Next',
-      component: Next
+      title: 'Register',
+      component: Register
     })
   }
 
@@ -30,9 +31,22 @@ class Main extends Component{
     console.log("rendering Main")
     return (
       <View style={styles.container}>
-        <Text>HEY THERE</Text>
+        <Text style={styles.welcome}>
+        R E A C H out with a simple tap.{'\n'}
+        </Text>
         <TouchableHighlight onPress={this._onPressButton.bind(this)}>
-          <Text>PRESS MEE</Text>
+          <Image source={require('../../reach_button.png')} style={{width: 300, height: 300}}/>
+        </TouchableHighlight>
+        <Text style={styles.instructions}>
+        {'\n'}
+        Preset SMS messages to send to your support network.
+        </Text>  
+        <Text>
+        When its time to reach out, simply open and{'\n'}
+        R E A C H
+        </Text>
+        <TouchableHighlight onPress={this._onPressButton.bind(this)}>
+          <Text>Register</Text>
         </TouchableHighlight>
       </View>
     )
